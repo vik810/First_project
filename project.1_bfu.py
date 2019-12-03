@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import physconst as phc
 
-def light_deformation(alpha=10, y_tela=1.5*10**13, r=7*10**8, m=1.9*10**30):
+def light_deformation(alpha=10, y_tela=1.5*10**20,  r=7*10**8, m=1.9*10**30):
     """ Функция, расчитывающая угол искривления луча света 
         Параметры функции:
             alpha - угол наклона луча (относительно вертикали)
@@ -35,7 +35,6 @@ def light_deformation(alpha=10, y_tela=1.5*10**13, r=7*10**8, m=1.9*10**30):
     y31=d*np.cos(alpha)
     y32=d*np.sin(np.pi/2 + alpha - tetta) + y_tela
     plt.plot([x31, x32], [y31, y32], color='orange', linestyle='--')
-    
     plt.plot(x22, y22, color='orange', marker='*', ms=12)
     plt.plot(x32, y32, color='orange', marker='*', ms=12)
 
@@ -45,4 +44,3 @@ def light_deformation(alpha=10, y_tela=1.5*10**13, r=7*10**8, m=1.9*10**30):
     plt.show()
     
 light_deformation()
-
